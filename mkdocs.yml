@@ -1,14 +1,18 @@
+site_name: SciPy
 
-site_name: Scipy Tutorials
-
-
-extra_javascript: 
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+extra_javascript:
+  - mathjax-config.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
 
 markdown_extensions:
-    - mdx_math
-    
-
+  - pymdownx.arithmatex:
+      generic: true
+  - codehilite:
+      linenums: false
+      guess_lang: false
+      use_pygments: true
+      noclasses: true
+      pygments_style: manni
 
 theme:
   name: 'material'
@@ -20,33 +24,57 @@ theme:
   titles_only: false
   sticky_navigation: true
   collapse_navigation: true
- 
 
-  
-  
-markdown_extensions:
-  - codehilite:
-      linenums: false
-      guess_lang: false
-      use_pygments: true
-      noclasses: true
-      pygments_style: manni
-
+extra_css:
+  - extra.css
 
 extra:
   analytics:
     provider: google
     property: UA-156178967-1
-      
 
 
 nav:
 - Home: index.md
-- Introduction : intro/Numerical-Methods.md
-- Spherical Harmonics : Harmonics/Harmonics.md
-- Oscillating Membrane : Bessel/Bessel.md
-- Laplace Equation: Laplace/laplace.md
- 
- 
- 
- 
+- Introduction to SciPy: introduction_to_scipy.md
+- SciPy Installation: scipy_installation.md
+- SciPy Organization: scipy_organization.md
+- scipy.optimize: scipy_optimize.md
+- scipy.linalg: scipy_linalg.md
+- scipy.integrate: scipy_integrate.md
+- scipy.interpolate: scipy_interpolate.md
+- scipy.signal: scipy_signal.md
+- scipy.fft: scipy_fft.md
+- scipy.stats: scipy_stats.md
+- scipy.sparse: scipy_sparse.md
+- scipy.spatial: scipy_spatial.md
+- scipy.ndimage: scipy_ndimage.md
+- Function Minimization: function_minimization.md
+- Root Finding: root_finding.md
+- Curve Fitting: curve_fitting.md
+- Single Integration: single_integration.md
+- Multiple Integration: multiple_integration.md
+- Ordinary Differential Equations: ordinary_differential_equations.md
+- The 1D Interpolation: the_1d_interpolation.md
+- The 2D Interpolation: the_2d_interpolation.md
+- Multidimensional Interpolation: multidimensional_interpolation.md
+- Filtering: filtering.md
+- Convolution: convolution.md
+- Spectral Analysis: spectral_analysis.md
+- The 1D FFT: the_1d_fft.md
+- The 2D FFT: the_2d_fft.md
+- Multidimensional FFT: multidimensional_fft.md
+- Descriptive Statistics: descriptive_statistics.md
+- Probability Distributions: probability_distributions.md
+- Statistical Tests: statistical_tests.md
+- Sparse Matrix Creation: sparse_matrix_creation.md
+- Sparse Matrix Operations: sparse_matrix_operations.md
+- Distance Computation: distance_computation.md
+- Spatial Transformations: spatial_transformations.md
+- Spatial Data Structures: spatial_data_structures.md
+- Filtering: filtering.md
+- Morphological Operations: morphological_operations.md
+- Geometric Transformations: geometric_transformations.md
+- Input and Output: input_and_output.md
+- Constants: constants.md
+- Miscellaneous Utilities: miscellaneous_utilities.md
