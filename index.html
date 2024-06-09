@@ -8,22 +8,28 @@
       
       
       
+      
+      
+        <link rel="next" href="introduction_to_scipy/">
+      
+      
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
-        <title>Scipy Tutorials</title>
+        <title>SciPy</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.644de097.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
       
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
-        
       
+
+
     
+    
+      
     
     
       
@@ -35,7 +41,9 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      <link rel="stylesheet" href="extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -44,24 +52,19 @@
   
   
 
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","UA-156178967-1"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","UA-156178967-1",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=UA-156178967-1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-156178967-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
-
-
+    
     
     
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -81,22 +84,25 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Scipy Tutorials" class="md-header__button md-logo" aria-label="Scipy Tutorials" data-md-component="logo">
+    <a href="." title="SciPy" class="md-header__button md-logo" aria-label="SciPy" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Scipy Tutorials
+            SciPy
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -110,9 +116,13 @@
     </div>
     
     
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -120,13 +130,16 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -137,7 +150,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -167,41 +180,53 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Scipy Tutorials" class="md-nav__button md-logo" aria-label="Scipy Tutorials" data-md-component="logo">
+    <a href="." title="SciPy" class="md-nav__button md-logo" aria-label="SciPy" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    Scipy Tutorials
+    SciPy
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
       
       
-      
-
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
-        Home
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
       </a>
       
         
@@ -219,7 +244,378 @@
       
         <li class="md-nav__item">
   <a href="#introduction-to-scipy" class="md-nav__link">
-    Introduction to Scipy
+    <span class="md-ellipsis">
+      Introduction to SciPy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipy-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      SciPy Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipy-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      SciPy Organization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyoptimize" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.optimize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipylinalg" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.linalg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyintegrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.integrate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyinterpolate" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.interpolate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipysignal" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.signal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyfft" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.fft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipystats" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipysparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.sparse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyspatial" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.spatial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyndimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.ndimage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Minimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-finding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root Finding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curve-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curve Fitting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-differential-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordinary Differential Equations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-1d-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 1D Interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-2d-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 2D Interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multidimensional-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multidimensional Interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectral-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spectral Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-1d-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 1D FFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-2d-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 2D FFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multidimensional-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multidimensional FFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptive Statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Distributions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-matrix-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sparse Matrix Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-matrix-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sparse Matrix Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distance Computation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Transformations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Data Structures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphological-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Morphological Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Transformations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input and Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous Utilities
+    </span>
   </a>
   
 </li>
@@ -234,14 +630,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
-      <a href="intro/Numerical-Methods/" class="md-nav__link">
-        Introduction
+      <a href="introduction_to_scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to SciPy
+  </span>
+  
+
       </a>
     </li>
   
@@ -249,14 +650,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
-      <a href="Harmonics/Harmonics/" class="md-nav__link">
-        Spherical Harmonics
+      <a href="scipy_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SciPy Installation
+  </span>
+  
+
       </a>
     </li>
   
@@ -264,14 +670,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
-      <a href="Bessel/Bessel/" class="md-nav__link">
-        Oscillating Membrane
+      <a href="scipy_organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SciPy Organization
+  </span>
+  
+
       </a>
     </li>
   
@@ -279,14 +690,779 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
-      <a href="Laplace/laplace/" class="md-nav__link">
-        Laplace Equation
+      <a href="scipy_optimize/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.optimize
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_linalg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.linalg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_integrate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.integrate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_interpolate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.interpolate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_signal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.signal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_fft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.fft
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_stats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.stats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_sparse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.sparse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_spatial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.spatial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scipy_ndimage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy.ndimage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="function_minimization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Function Minimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="root_finding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Root Finding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="curve_fitting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curve Fitting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="single_integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multiple_integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ordinary_differential_equations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ordinary Differential Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the_1d_interpolation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The 1D Interpolation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the_2d_interpolation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The 2D Interpolation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multidimensional_interpolation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multidimensional Interpolation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="filtering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="convolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spectral_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectral Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the_1d_fft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The 1D FFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the_2d_fft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The 2D FFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multidimensional_fft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multidimensional FFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="descriptive_statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Descriptive Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="probability_distributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Probability Distributions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="statistical_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sparse_matrix_creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sparse Matrix Creation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sparse_matrix_operations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sparse Matrix Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="distance_computation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distance Computation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spatial_transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Transformations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spatial_data_structures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="filtering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="morphological_operations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Morphological Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geometric_transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geometric Transformations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="input_and_output/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input and Output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="constants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Constants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="miscellaneous_utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous Utilities
+  </span>
+  
+
       </a>
     </li>
   
@@ -318,7 +1494,378 @@
       
         <li class="md-nav__item">
   <a href="#introduction-to-scipy" class="md-nav__link">
-    Introduction to Scipy
+    <span class="md-ellipsis">
+      Introduction to SciPy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipy-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      SciPy Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipy-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      SciPy Organization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyoptimize" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.optimize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipylinalg" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.linalg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyintegrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.integrate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyinterpolate" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.interpolate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipysignal" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.signal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyfft" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.fft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipystats" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipysparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.sparse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyspatial" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.spatial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scipyndimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      scipy.ndimage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Minimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-finding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root Finding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curve-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curve Fitting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-differential-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordinary Differential Equations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-1d-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 1D Interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-2d-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 2D Interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multidimensional-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multidimensional Interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectral-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spectral Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-1d-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 1D FFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-2d-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 2D FFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multidimensional-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multidimensional FFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptive Statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Distributions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-matrix-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sparse Matrix Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-matrix-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sparse Matrix Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distance Computation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Transformations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Data Structures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphological-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Morphological Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Transformations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input and Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous Utilities
+    </span>
   </a>
   
 </li>
@@ -331,44 +1878,124 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
   <h1>Home</h1>
 
-<h3 id="introduction-to-scipy">Introduction to Scipy</h3>
+<h2 id="introduction-to-scipy">Introduction to SciPy</h2>
+<p>SciPy is an open-source Python library used for scientific and technical computing. It builds on NumPy and provides a large number of higher-level functions that operate on NumPy arrays.</p>
+<h2 id="scipy-installation">SciPy Installation</h2>
+<p>SciPy can be installed using package managers like pip or conda. The command <code>pip install scipy</code> or <code>conda install scipy</code> installs the package.</p>
+<h2 id="scipy-organization">SciPy Organization</h2>
+<p>SciPy is organized into sub-packages based on different scientific and technical computing tasks, including optimization, linear algebra, integration, interpolation, and signal processing.</p>
+<h2 id="scipyoptimize">scipy.optimize</h2>
+<p>The <code>scipy.optimize</code> module provides functions for optimization, including finding the minimum or maximum of a function, curve fitting, and solving equations. Key functions include <code>minimize</code>, <code>curve_fit</code>, and <code>root</code>.</p>
+<h2 id="scipylinalg">scipy.linalg</h2>
+<p>The <code>scipy.linalg</code> module contains functions for linear algebra operations. It includes routines for matrix factorizations, solving linear systems, and performing other matrix operations. Key functions include <code>lu</code>, <code>svd</code>, and <code>solve</code>.</p>
+<h2 id="scipyintegrate">scipy.integrate</h2>
+<p>The <code>scipy.integrate</code> module provides functions for numerical integration and solving ordinary differential equations. Key functions include <code>quad</code>, <code>dblquad</code>, <code>odeint</code>, and <code>solve_ivp</code>.</p>
+<h2 id="scipyinterpolate">scipy.interpolate</h2>
+<p>The <code>scipy.interpolate</code> module includes functions for interpolation of data points. It provides various interpolation techniques, such as linear, spline, and nearest-neighbor interpolation. Key functions include <code>interp1d</code>, <code>interp2d</code>, and <code>griddata</code>.</p>
+<h2 id="scipysignal">scipy.signal</h2>
+<p>The <code>scipy.signal</code> module contains functions for signal processing. It includes tools for filtering, convolution, spectral analysis, and more. Key functions include <code>convolve</code>, <code>spectrogram</code>, and <code>find_peaks</code>.</p>
+<h2 id="scipyfft">scipy.fft</h2>
+<p>The <code>scipy.fft</code> module provides functions for computing fast Fourier transforms. It supports multi-dimensional transforms and includes functions like <code>fft</code>, <code>ifft</code>, <code>fft2</code>, and <code>fftshift</code>.</p>
+<h2 id="scipystats">scipy.stats</h2>
+<p>The <code>scipy.stats</code> module contains functions for statistical analysis. It includes tools for probability distributions, statistical tests, and descriptive statistics. Key functions include <code>norm</code>, <code>t-test</code>, and <code>pearsonr</code>.</p>
+<h2 id="scipysparse">scipy.sparse</h2>
+<p>The <code>scipy.sparse</code> module provides functions for working with sparse matrices. It includes tools for creating, manipulating, and performing operations on sparse matrices. Key functions include <code>csr_matrix</code>, <code>csc_matrix</code>, and <code>lil_matrix</code>.</p>
+<h2 id="scipyspatial">scipy.spatial</h2>
+<p>The <code>scipy.spatial</code> module contains functions for spatial data structures and algorithms. It includes tools for computing distances, nearest neighbors, and spatial transformations. Key functions include <code>KDTree</code>, <code>distance_matrix</code>, and <code>ConvexHull</code>.</p>
+<h2 id="scipyndimage">scipy.ndimage</h2>
+<p>The <code>scipy.ndimage</code> module provides functions for multi-dimensional image processing. It includes tools for filtering, interpolation, and morphology operations on images. Key functions include <code>gaussian_filter</code>, <code>rotate</code>, and <code>label</code>.</p>
+<h2 id="function-minimization">Function Minimization</h2>
+<p>SciPy provides functions for finding the minimum of a scalar function or a multivariate function. Key functions include <code>minimize</code>, <code>minimize_scalar</code>, and <code>basinhopping</code>.</p>
+<h2 id="root-finding">Root Finding</h2>
+<p>SciPy includes methods for finding the roots of scalar functions and systems of equations. Key functions include <code>root</code>, <code>brentq</code>, and <code>fsolve</code>.</p>
+<h2 id="curve-fitting">Curve Fitting</h2>
+<p>SciPy provides functions for fitting curves to data points using nonlinear optimization techniques. The key function for this is <code>curve_fit</code>.</p>
+<h2 id="single-integration">Single Integration</h2>
+<p>SciPy provides functions for performing single, double, and triple numerical integration. The key function for single integration is <code>quad</code>.</p>
+<h2 id="multiple-integration">Multiple Integration</h2>
+<p>SciPy includes functions for performing multiple numerical integration, such as <code>dblquad</code> for double integration and <code>tplquad</code> for triple integration.</p>
+<h2 id="ordinary-differential-equations">Ordinary Differential Equations</h2>
+<p>SciPy provides solvers for ordinary differential equations, including initial value problems and boundary value problems. Key functions include <code>odeint</code> and <code>solve_ivp</code>.</p>
+<h2 id="the-1d-interpolation">The 1D Interpolation</h2>
+<p>SciPy includes tools for 1-D interpolation of data points, including linear and spline interpolation. The key function for 1-D interpolation is <code>interp1d</code>.</p>
+<h2 id="the-2d-interpolation">The 2D Interpolation</h2>
+<p>SciPy provides functions for 2-D interpolation of data points using techniques such as bilinear and bicubic interpolation. Key functions include <code>interp2d</code> and <code>griddata</code>.</p>
+<h2 id="multidimensional-interpolation">Multidimensional Interpolation</h2>
+<p>SciPy supports interpolation in higher dimensions, allowing for interpolation over multi-dimensional grids. The key function for this is <code>RegularGridInterpolator</code>.</p>
+<h2 id="filtering">Filtering</h2>
+<p>SciPy provides tools for signal filtering, including FIR and IIR filters. Key functions include <code>firwin</code>, <code>iirfilter</code>, and <code>lfilter</code>.</p>
+<h2 id="convolution">Convolution</h2>
+<p>SciPy includes functions for performing convolution and correlation of signals. The key functions for this are <code>convolve</code> and <code>correlate</code>.</p>
+<h2 id="spectral-analysis">Spectral Analysis</h2>
+<p>SciPy provides tools for spectral analysis of signals, including the computation of power spectra and spectrograms. Key functions include <code>welch</code> and <code>spectrogram</code>.</p>
+<h2 id="the-1d-fft">The 1D FFT</h2>
+<p>SciPy provides functions for computing the one-dimensional Fast Fourier Transform (FFT) and its inverse. Key functions include <code>fft</code> and <code>ifft</code>.</p>
+<h2 id="the-2d-fft">The 2D FFT</h2>
+<p>SciPy includes functions for computing the two-dimensional FFT and its inverse. The key functions for this are <code>fft2</code> and <code>ifft2</code>.</p>
+<h2 id="multidimensional-fft">Multidimensional FFT</h2>
+<p>SciPy supports FFT operations in multiple dimensions, including real and complex transforms. The key function for this is <code>fftn</code>.</p>
+<h2 id="descriptive-statistics">Descriptive Statistics</h2>
+<p>SciPy provides functions for computing descriptive statistics, including mean, median, variance, and standard deviation. Key functions include <code>describe</code>, <code>gmean</code>, and <code>hmean</code>.</p>
+<h2 id="probability-distributions">Probability Distributions</h2>
+<p>SciPy includes tools for working with probability distributions, including sampling, density functions, and cumulative distribution functions. Key classes include <code>norm</code>, <code>expon</code>, and <code>binom</code>.</p>
+<h2 id="statistical-tests">Statistical Tests</h2>
+<p>SciPy provides a wide range of statistical tests, including t-tests, chi-square tests, and ANOVA. Key functions include <code>ttest_ind</code>, <code>chi2_contingency</code>, and <code>f_oneway</code>.</p>
+<h2 id="sparse-matrix-creation">Sparse Matrix Creation</h2>
+<p>SciPy includes functions for creating sparse matrices in various formats, including CSR, CSC, and LIL. Key functions include <code>csr_matrix</code>, <code>csc_matrix</code>, and <code>lil_matrix</code>.</p>
+<h2 id="sparse-matrix-operations">Sparse Matrix Operations</h2>
+<p>SciPy provides functions for performing operations on sparse matrices, including arithmetic operations, matrix multiplication, and solving linear systems. Key functions include <code>sparse_add</code>, <code>sparse_dot</code>, and <code>sparse_solve</code>.</p>
+<h2 id="distance-computation">Distance Computation</h2>
+<p>SciPy provides tools for computing distances between points and sets of points. Key functions include <code>distance_matrix</code>, <code>cdist</code>, and <code>pdist</code>.</p>
+<h2 id="spatial-transformations">Spatial Transformations</h2>
+<p>SciPy includes functions for performing spatial transformations, such as rotations and affine transformations. Key functions include <code>Rotation</code> and <code>AffineTransform</code>.</p>
+<h2 id="spatial-data-structures">Spatial Data Structures</h2>
+<p>SciPy provides spatial data structures, such as KD-Trees, for efficient nearest neighbor searches and other spatial queries. The key class for this is <code>KDTree</code>.</p>
+<h2 id="filtering_1">Filtering</h2>
+<p>SciPy's ndimage module includes functions for filtering images, such as Gaussian filtering and median filtering. Key functions include <code>gaussian_filter</code> and <code>median_filter</code>.</p>
+<h2 id="morphological-operations">Morphological Operations</h2>
+<p>SciPy provides tools for performing morphological operations on images, such as erosion, dilation, and opening. Key functions include <code>binary_erosion</code> and <code>binary_dilation</code>.</p>
+<h2 id="geometric-transformations">Geometric Transformations</h2>
+<p>SciPy includes functions for performing geometric transformations on images, such as rotation, scaling, and affine transformations. Key functions include <code>rotate</code> and <code>affine_transform</code>.</p>
+<h2 id="input-and-output">Input and Output</h2>
+<p>SciPy provides functions for reading and writing data in various formats, including text files, binary files, and MATLAB files. Key functions include <code>read_array</code>, <code>write_array</code>, and <code>loadmat</code>.</p>
+<h2 id="constants">Constants</h2>
+<p>SciPy includes a set of physical and mathematical constants, such as the speed of light, Planck's constant, and pi. These constants are available in the <code>scipy.constants</code> module.</p>
+<h2 id="miscellaneous-utilities">Miscellaneous Utilities</h2>
+<p>SciPy provides a variety of miscellaneous utilities for scientific computing, including functions for handling special functions, integration, and differentiation. Key modules include <code>scipy.special</code> and <code>scipy.misc</code>.</p>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-      
-        
-        <a href="intro/Numerical-Methods/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Introduction
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -390,12 +2017,16 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c44cc438.min.js"></script>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="mathjax-config.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
       
     
   </body>
